@@ -4,25 +4,25 @@ A sleek desktop application for Ubuntu 25.04 that transforms your plain text int
 
 ## ✨ Features
 
-🎯 **Simple Interface** - Clean, minimal design with just one button and a textarea
-🚀 **AI-Powered** - Leverages Gemini 2.5 Flash for intelligent markdown formatting
-✏️ **Editable Output** - Generated markdown can be edited directly in the app
-⚡ **Fast Processing** - Quick API responses for seamless user experience
+🎯 **Simple Interface** - Clean, minimal design with just one button and a textarea  
+🚀 **AI-Powered** - Leverages Gemini 2.5 Flash for intelligent markdown formatting  
+✏️ **Editable Output** - Generated markdown can be edited directly in the app  
+⚡ **Fast Processing** - Quick API responses for seamless user experience  
 🐧 **Ubuntu Optimized** - Built specifically for Ubuntu 25.04
 
 ## 🛠️ Tech Stack
 
-📦 **Frontend Framework** - Electron or Tauri for cross-platform desktop app
-🎨 **UI Library** - HTML/CSS/JavaScript with modern styling
-🔗 **API Integration** - Google Gemini 2.5 Flash API
+📦 **Frontend Framework** - Electron or Tauri for cross-platform desktop app  
+🎨 **UI Library** - HTML/CSS/JavaScript with modern styling  
+🔗 **API Integration** - Google Gemini 2.5 Flash API  
 🖥️ **Target Platform** - Ubuntu 25.04 LTS
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-🔧 **Node.js** - Version 18 or higher
-🔑 **Gemini API Key** - Get yours from Google AI Studio
+🔧 **Node.js** - Version 18 or higher  
+🔑 **Gemini API Key** - Get yours from Google AI Studio  
 🐧 **Ubuntu 25.04** - Primary target platform
 
 ### Installation
@@ -47,10 +47,10 @@ npm start
 
 ## 🎮 How to Use
 
-1️⃣ **Input Text** - Type or paste your content into the textarea
-2️⃣ **Generate** - Click the "Generate Markdown" button
-3️⃣ **Review** - AI-formatted markdown appears in the output area
-4️⃣ **Edit** - Make any adjustments to the generated markdown
+1️⃣ **Input Text** - Type or paste your content into the textarea  
+2️⃣ **Generate** - Click the "Generate Markdown" button  
+3️⃣ **Review** - AI-formatted markdown appears in the output area  
+4️⃣ **Edit** - Make any adjustments to the generated markdown  
 5️⃣ **Export** - Copy or save your formatted content
 
 ## 🏗️ Project Structure
@@ -82,9 +82,9 @@ GEMINI_API_KEY=your_api_key_here
 
 ## 🤝 Contributing
 
-🐛 **Bug Reports** - Open an issue with detailed reproduction steps
-💡 **Feature Requests** - Suggest new features via GitHub issues
-🔧 **Pull Requests** - Fork, create a feature branch, and submit a PR
+🐛 **Bug Reports** - Open an issue with detailed reproduction steps  
+💡 **Feature Requests** - Suggest new features via GitHub issues  
+🔧 **Pull Requests** - Fork, create a feature branch, and submit a PR  
 📖 **Documentation** - Help improve docs and examples
 
 ## 📝 License
@@ -93,14 +93,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-🤖 **Google Gemini** - For providing the AI capabilities
-🐧 **Ubuntu Community** - For the amazing Linux distribution
+🤖 **Google Gemini** - For providing the AI capabilities  
+🔗 **Electron** - For the cross-platform desktop app framework  
+🐧 **Ubuntu Community** - For the amazing Linux distribution  
 💻 **Open Source** - Built with love for the open source community
 
 ## 📞 Support
 
-🐛 **Issues** - Report bugs on GitHub Issues
-💬 **Discussions** - Join conversations in GitHub Discussions
+🐛 **Issues** - Report bugs on GitHub Issues  
+💬 **Discussions** - Join conversations in GitHub Discussions  
 📧 **Contact** - Reach out via email for urgent matters
 
 ---
