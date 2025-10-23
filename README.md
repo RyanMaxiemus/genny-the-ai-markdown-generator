@@ -55,18 +55,20 @@ npm start
 
 ## 🏗️ Project Structure
 
-```
+```text
 genny-the-ai-markdown-generator/
-├── 📁 src/
-│   ├── 📄 main.js          # Main application entry
-│   ├── 📄 renderer.js      # UI logic and API calls
-│   ├── 📄 styles.css       # Application styling
-│   └── 📁 utils/
-│       └── 📄 api.js       # Gemini API integration
 ├── 📁 assets/
 │   └── 📄 icon.png         # Application icon
-├── 📄 package.json         # Dependencies and scripts
+├── 📁 src/
+│   ├── 📁 utils/
+│   │   └── 📄 api.js       # Gemini API integration
+│   ├── 📄 main.js          # Main application entry
+│   ├── 📄 renderer.js      # UI logic and API calls
+│   └── 📄 styles.css       # Application styling
 ├── 📄 .env.example         # Environment variables template
+├── 📄 .gitignore           # Git ignore file
+├── 📄 package-lock.json    # Dependencies lock file
+├── 📄 package.json         # Dependencies and scripts
 └── 📄 README.md            # This file
 ```
 
