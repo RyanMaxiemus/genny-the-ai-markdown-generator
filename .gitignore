@@ -3,6 +3,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # Environment variables
 .env
@@ -15,10 +16,34 @@ yarn-error.log*
 dist/
 build/
 out/
+dist-electron/
 
 # Electron specific
 app/
 release/
+packages/
+*.dmg
+*.exe
+*.deb
+*.rpm
+*.AppImage
+
+# Vite
+.vite/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# TypeScript
+*.tsbuildinfo
+.tscache/
+
+# React/JSX
+.eslintcache
+
+# Testing
+coverage/
+*.lcov
+.nyc_output/
 
 # OS generated files
 .DS_Store
@@ -28,6 +53,7 @@ release/
 .Trashes
 ehthumbs.db
 Thumbs.db
+Desktop.ini
 
 # IDE files
 .vscode/
@@ -35,10 +61,13 @@ Thumbs.db
 *.swp
 *.swo
 *~
+.history/
+.kiro/
 
 # Logs
 logs/
 *.log
+lerna-debug.log*
 
 # Runtime data
 pids/
@@ -46,10 +75,10 @@ pids/
 *.seed
 *.pid.lock
 
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
-
 # Temporary folders
 tmp/
 temp/
+.cache/
+
+# Monaco Editor
+monaco-editor/
