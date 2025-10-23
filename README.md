@@ -67,7 +67,7 @@ genny-the-ai-markdown-generator/
 │   └── 📄 icon.png         # Application icon
 ├── 📄 package.json         # Dependencies and scripts
 ├── 📄 .env.example         # Environment variables template
-└── 📄 README.md           # This file
+└── 📄 README.md            # This file
 ```
 
 ## ⚙️ Configuration
