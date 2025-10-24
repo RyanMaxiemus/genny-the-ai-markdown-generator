@@ -58,15 +58,20 @@ npm start
 ```text
 genny-the-ai-markdown-generator/
 ├── 📁 assets/
-│   └── 📄 icon.png         # Application icon
+│   ├── 📁 icons/
+│   │   └── 📄 icon.png         # Application icon
+|   ├── 📁 styles/
+│   │   └── 📄 styles.css       # Application styling
 ├── 📁 src/
 │   ├── 📁 utils/
 │   │   └── 📄 api.js       # Gemini API integration
-│   ├── 📄 main.js          # Main application entry
 │   ├── 📄 renderer.js      # UI logic and API calls
 │   └── 📄 styles.css       # Application styling
+├── 📄 .env                 # Environment variables
 ├── 📄 .env.example         # Environment variables template
 ├── 📄 .gitignore           # Git ignore file
+├── 📄 LICENSE              # License file
+├── 📄 main.js              # Main application entry
 ├── 📄 package-lock.json    # Dependencies lock file
 ├── 📄 package.json         # Dependencies and scripts
 └── 📄 README.md            # This file
