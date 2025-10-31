@@ -1,3 +1,6 @@
+require("dotenv").config();
+const fetch = require("node-fetch");
+
 // Using fetch API
 async function callGeminiAPI(task, content) {
   const apiKey = process.env.GEMINI_API_KEY;
