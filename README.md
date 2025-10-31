@@ -1,11 +1,11 @@
 # 🤖 AI Markdown Generator
 
-A sleek desktop application for Ubuntu 25.04 that transforms your plain text into beautifully formatted Markdown using Google's Gemini 2.5 Flash AI.
+A sleek desktop application for Ubuntu 25.04 that transforms your plain text into beautifully formatted Markdown using Google's Gemini 2.0 Flash AI.
 
 ## ✨ Features
 
 🎯 **Simple Interface** - Clean, minimal design with just one button and a textarea  
-🚀 **AI-Powered** - Leverages Gemini 2.5 Flash for intelligent markdown formatting  
+🚀 **AI-Powered** - Leverages Gemini 2.0 Flash for intelligent markdown formatting  
 ✏️ **Editable Output** - Generated markdown can be edited directly in the app  
 ⚡ **Fast Processing** - Quick API responses for seamless user experience  
 🐧 **Ubuntu Optimized** - Built specifically for Ubuntu 25.04
@@ -14,7 +14,7 @@ A sleek desktop application for Ubuntu 25.04 that transforms your plain text int
 
 📦 **Frontend Framework** - Electron or Tauri for cross-platform desktop app  
 🎨 **UI Library** - HTML/CSS/JavaScript with modern styling  
-🔗 **API Integration** - Google Gemini 2.5 Flash API  
+🔗 **API Integration** - Google Gemini 2.0 Experimental API  
 🖥️ **Target Platform** - Ubuntu 25.04 LTS
 
 ## 🚀 Getting Started
