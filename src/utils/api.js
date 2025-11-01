@@ -9,7 +9,7 @@ async function callGeminiAPI(task, content) {
     throw new Error("GEMINI_API_KEY not found in environment variables");
   }
 
-  const url = `https://generativelanguage.googleapis.com/viberta/models/gemini-2.0-flash-exp:generateContent?key=$(apiKey)`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${apiKey}`;
 
   const payload = {
     contents: [
@@ -35,7 +35,7 @@ async function callGeminiAPI(task, content) {
     });
 
     if (!response.ok) {
-      throw new Error(`API Request Failed: $(response.status)`);
+      throw new Error(`API Request Failed: ${response.status}`);
     }
 
     const data = await response.json();
@@ -50,3 +50,19 @@ async function callGeminiAPI(task, content) {
     throw error;
   }
 }
+
+// Generate markdown function
+async function generateMarkdown(userText) {
+  const task =
+    "Convert the following text into well-formatted Markdown. Use appropriate headers, lists, emphasis, and other Markdown syntax to improve readability and structure.";
+
+  try {
+    const markdownResult = await callGeminiAPI(task, userText);
+    return markdownResult;
+  } catch (error) {
+    console.error("Error generating markdown:", error);
+    throw error;
+  }
+}
+
+module.exports = { callGeminiAPI, generateMarkdown };

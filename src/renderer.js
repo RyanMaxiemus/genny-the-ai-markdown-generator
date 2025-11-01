@@ -1,4 +1,5 @@
-const task = "Format this text as clean, readable Markdown";
+const { generateMarkdown } = require("./utils/api.js");
+
 const userInput =
   "Markdown Markdown is a lightweight and popular markup language. It is used for all sorts of text formatting.";
 
