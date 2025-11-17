@@ -1,4 +1,4 @@
-# 🤖 AI Markdown Generator
+# 🤖 Genny The Generator
 
 A sleek desktop application for Ubuntu 25.04 that transforms your plain text into beautifully formatted Markdown using Google's Gemini 2.0 Flash AI.
 
@@ -12,7 +12,7 @@ A sleek desktop application for Ubuntu 25.04 that transforms your plain text int
 
 ## 🛠️ Tech Stack
 
-📦 **Frontend Framework** - Electron or Tauri for cross-platform desktop app  
+📦 **Frontend Framework** - Electron for cross-platform desktop app  
 🎨 **UI Library** - HTML/CSS/JavaScript with modern styling  
 🔗 **API Integration** - Google Gemini 2.0 Experimental API  
 🖥️ **Target Platform** - Ubuntu 25.04 LTS

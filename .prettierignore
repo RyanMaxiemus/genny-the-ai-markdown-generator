@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+coverage/
+.vscode/
+.idea/
+.next/
+.turbo/
+.cache/
+*.lock
+*.log
+.env
+.env.*
+venv/
+.venv/
+__pycache__/
+vendor/
