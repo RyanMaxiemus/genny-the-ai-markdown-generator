@@ -84,7 +84,7 @@
     "devlop": "^1.1.0",
     "dir-compare": "^4.2.0",
     "dmg-builder": "^26.0.12",
-    "dompurify": "^3.1.7",
+    "dompurify": "^3.2.4",
     "dotenv": "^16.6.1",
     "dotenv-expand": "^11.0.7",
     "dunder-proto": "^1.0.1",
