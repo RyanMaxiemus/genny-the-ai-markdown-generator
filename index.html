@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Genny The Generator</title>
+    <link
+      rel="stylesheet"
+      href="assets/styles/styles.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="output-area">
+        <textarea
+          class="editable-content"
+          id="markdownOutput"
+          placeholder="Generated markdown will appear here..."
+        ></textarea>
+      </div>
+
+      <div class="input-section">
+        <div class="textarea-container">
+          <textarea
+            class="input-textarea"
+            id="promptInput"
+            placeholder="Enter your prompt here..."
+          ></textarea>
+        </div>
+
+        <div class="button-container">
+          <button
+            class="generate-btn"
+            id="generateBtn"
+          >
+            Generate
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/renderer.js"></script>
+  </body>
+</html>
