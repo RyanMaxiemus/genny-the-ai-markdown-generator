@@ -194,7 +194,7 @@
     "jackspeak": "^3.4.3",
     "jake": "^10.9.4",
     "jotai": "^2.15.0",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "json-buffer": "^3.0.1",
     "json-schema-traverse": "^0.4.1",
     "json-stable-stringify-without-jsonify": "^1.0.1",
