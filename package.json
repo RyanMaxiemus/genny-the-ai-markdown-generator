@@ -205,7 +205,7 @@
     "lazy-val": "^1.0.5",
     "levn": "^0.4.1",
     "locate-path": "^6.0.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "lodash.merge": "^4.6.2",
     "log-symbols": "^4.1.0",
     "longest-streak": "^3.1.0",
