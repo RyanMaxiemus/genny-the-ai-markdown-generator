@@ -1,89 +1,335 @@
+/* ==========================================================================
+   Genny – Light & Dark theme with CSS custom properties
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Light theme (default)
+   -------------------------------------------------------------------------- */
+:root {
+  --color-bg: #f8f9fa;
+  --color-bg-elevated: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-output: #f1f3f5;
+  --color-border: #dee2e6;
+  --color-border-focus: #4caf50;
+  --color-text: #212529;
+  --color-text-muted: #495057;
+  --color-text-placeholder: #868e96;
+  --color-accent: #2e7d32;
+  --color-accent-hover: #1b5e20;
+  --color-accent-disabled: #adb5bd;
+  --color-accent-text: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'DM Mono', 'SF Mono', 'Cascadia Code', Consolas, monospace;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --focus-ring:
+    0 0 0 2px var(--color-bg-elevated) inset, 0 0 0 4px var(--color-border-focus);
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Dark theme
+   -------------------------------------------------------------------------- */
+[data-theme='dark'] {
+  --color-bg: #0d1117;
+  --color-bg-elevated: #161b22;
+  --color-surface: #161b22;
+  --color-surface-output: #21262d;
+  --color-border: #30363d;
+  --color-border-focus: #3fb950;
+  --color-text: #e6edf3;
+  --color-text-muted: #8b949e;
+  --color-text-placeholder: #6e7681;
+  --color-accent: #238636;
+  --color-accent-hover: #2ea043;
+  --color-accent-disabled: #484f58;
+  --color-accent-text: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.app-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  background-color: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 0 var(--color-shadow);
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.app-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.app-header .theme-toggle {
+  margin-left: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Theme toggle
+   -------------------------------------------------------------------------- */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border-color: var(--color-text-muted);
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.theme-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Toggle shows icon for theme you switch to: moon = go dark, sun = go light */
+[data-theme='light'] .theme-icon-sun,
+[data-theme='dark'] .theme-icon-moon {
+  display: none;
+}
+
+[data-theme='light'] .theme-icon-moon,
+[data-theme='dark'] .theme-icon-sun {
+  display: inline;
+}
+
+html:not([data-theme]) .theme-icon-sun {
+  display: none;
+}
+html:not([data-theme]) .theme-icon-moon {
+  display: inline;
+}
+
+/* --------------------------------------------------------------------------
+   Main layout
+   -------------------------------------------------------------------------- */
 .container {
   display: flex;
   flex-direction: column;
-  height: 99vh;
+  flex: 1;
+  min-height: 0;
 }
 
+/* --------------------------------------------------------------------------
+   Output area
+   -------------------------------------------------------------------------- */
 .output-area {
   flex: 1;
-  padding: 20px;
-  background-color: #f5f5f5;
+  padding: 20px 24px;
+  background-color: var(--color-surface-output);
   overflow-y: auto;
 }
 
 .editable-content {
-  width: 97.25%;
-  height: 90%;
-  border: 1px solid #ddd;
-  padding: 15px;
-  font-family: 'Courier New', monospace;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  padding: 16px 18px;
+  font-family: var(--font-mono);
   font-size: 14px;
-  background-color: white;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   resize: none;
   outline: none;
-  border-radius: 4px;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
+.editable-content::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+.editable-content:hover {
+  border-color: var(--color-text-muted);
+}
+
+.editable-content:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.editable-content:focus-visible {
+  outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   Input section
+   -------------------------------------------------------------------------- */
 .input-section {
-  height: 90px;
+  flex-shrink: 0;
   display: flex;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
+  gap: 12px;
+  padding: 16px 24px 24px;
+  background-color: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-border);
 }
 
 .textarea-container {
   flex: 1;
-  padding: 20px;
-  padding-bottom: 42px;
-  padding-right: 10px;
+  min-width: 0;
 }
 
 .input-textarea {
   width: 100%;
-  height: 100%;
-  border: 1px solid #ddd;
-  padding: 10px;
-  font-family: Arial, sans-serif;
+  height: 80px;
+  padding: 12px 16px;
+  font-family: var(--font-sans);
   font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   resize: none;
   outline: none;
-  border-radius: 4px;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
+.input-textarea::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+.input-textarea:hover {
+  border-color: var(--color-text-muted);
+}
+
+.input-textarea:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.input-textarea:focus-visible {
+  outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   Generate button
+   -------------------------------------------------------------------------- */
 .button-container {
-  width: 120px;
-  padding: 20px;
-  padding-left: 10px;
+  flex-shrink: 0;
   display: flex;
   align-items: flex-end;
 }
 
 .generate-btn {
-  width: 100%;
-  height: 50px;
-  background-color: #4caf50;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 48px;
+  padding: 0 20px;
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition:
+    background-color var(--transition-normal),
+    transform var(--transition-fast);
 }
 
-.generate-btn:hover {
-  background-color: #45a049;
+.generate-btn:hover:not(:disabled) {
+  background-color: var(--color-accent-hover);
+}
+
+.generate-btn:active:not(:disabled) {
+  transform: scale(0.98);
 }
 
 .generate-btn:disabled {
-  background-color: #cccccc;
+  background-color: var(--color-accent-disabled);
   cursor: not-allowed;
+}
+
+.generate-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.generate-btn .btn-loading {
+  display: none;
+}
+
+.generate-btn.is-loading .btn-text {
+  display: none;
+}
+
+.generate-btn.is-loading .btn-loading {
+  display: inline;
 }

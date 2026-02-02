@@ -26,15 +26,23 @@ async function callGeminiAPI(task, content, retries = 3) {
     }
   };
 
+  const timeoutMs = Number(process.env.API_TIMEOUT) || 30000;
+
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
       const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
+        signal: controller.signal
       });
+
+      clearTimeout(timeoutId);
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
@@ -77,13 +85,22 @@ async function callGeminiAPI(task, content, retries = 3) {
         throw new Error('No response generated from Gemini API');
       }
     } catch (error) {
-      // If it's the last attempt or not a rate limit error, throw
-      if (attempt === retries || error.message.includes('Rate limit') === false) {
+      const isAbort = error.name === 'AbortError';
+      if (isAbort) {
+        throw new Error(
+          `Request timed out after ${timeoutMs / 1000}s. Check your connection or increase API_TIMEOUT in .env.`
+        );
+      }
+      if (attempt === retries) {
         console.error('Error calling Gemini API:', error);
         throw error;
       }
+      const waitTime = Math.pow(2, attempt) * 1000;
+      await new Promise(resolve => setTimeout(resolve, waitTime));
     }
   }
+
+  throw new Error('API request failed after retries');
 }
 
 // Generate markdown function
