@@ -251,7 +251,7 @@
     "mime-types": "^2.1.35",
     "mimic-fn": "^2.1.0",
     "mimic-response": "^1.0.1",
-    "minimatch": "^10.0.3",
+    "minimatch": "^10.2.3",
     "minimist": "^1.2.8",
     "minipass": "^3.3.6",
     "minipass-collect": "^1.0.2",
