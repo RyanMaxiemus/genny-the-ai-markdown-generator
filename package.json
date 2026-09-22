@@ -397,7 +397,7 @@
     "util-deprecate": "^1.0.2",
     "vfile": "^6.0.3",
     "vfile-message": "^4.0.3",
-    "vite": "^7.1.12",
+    "vite": "^7.3.2",
     "vitest": "^4.0.2",
     "wcwidth": "^1.0.1",
     "which": "^2.0.2",
