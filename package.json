@@ -293,7 +293,7 @@
     "pe-library": "^0.4.1",
     "pend": "^1.2.0",
     "picocolors": "^1.1.1",
-    "picomatch": "^4.0.3",
+    "picomatch": "^4.0.4",
     "plist": "^3.1.0",
     "postcss": "^8.5.6",
     "postject": "^1.0.0-alpha.6",
