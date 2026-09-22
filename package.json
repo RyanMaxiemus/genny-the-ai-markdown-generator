@@ -416,7 +416,7 @@
     "zwitch": "^2.0.4"
   },
   "devDependencies": {
-    "electron": "^39.2.1"
+    "electron": "^39.8.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
