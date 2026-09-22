@@ -327,7 +327,7 @@
     "retry": "^0.12.0",
     "rimraf": "^3.0.2",
     "roarr": "^2.15.4",
-    "rollup": "^4.52.5",
+    "rollup": "^4.59.0",
     "safe-buffer": "^5.2.1",
     "safer-buffer": "^2.1.2",
     "sanitize-filename": "^1.6.3",
