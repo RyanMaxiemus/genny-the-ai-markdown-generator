@@ -176,7 +176,7 @@
     "inflight": "^1.0.6",
     "inherits": "^2.0.4",
     "inline-style-parser": "^0.2.4",
-    "ip-address": "^10.0.1",
+    "ip-address": "^10.7.2",
     "is-alphabetical": "^2.0.1",
     "is-alphanumerical": "^2.0.1",
     "is-ci": "^3.0.1",
